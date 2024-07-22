@@ -1,0 +1,55 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.3" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "hidemode 3"
+			"$columnConstraints": "[fill][fill][fill][fill][fill][fill][fill][fill][fill][fill][fill]"
+			"$rowConstraints": "[][][][][][][][][][][][][]"
+		} ) {
+			name: "this"
+			"title": "学生考勤系统-教师端"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "欢迎使用学生考勤系统——教师端"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 5, false )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 5 1,aligny top,grow 100 0"
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar1"
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menu1"
+					"text": "考勤信息管理"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button1"
+						"text": "添加"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "TaddButton", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "RaddButton", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button3"
+						"text": "修改"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "TalterButton", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "RfindButton", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "RalterButton", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button2"
+						"text": "查询"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button4"
+						"text": "统计"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button4", true ) )
+					} )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 485, 420 )
+			"location": new java.awt.Point( 100, 55 )
+		} )
+	}
+}
